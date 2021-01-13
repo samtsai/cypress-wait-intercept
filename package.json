@@ -1,26 +1,20 @@
 {
-  "name": "cypress-test-tiny",
+  "name": "cypress-wait-intercept",
   "version": "1.0.0",
-  "description": "Small project for quickly testing Cypress.io test runner",
+  "description": "",
   "scripts": {
-    "cypress:run": "cypress run",
-    "cypress:open": "cypress open",
-    "cypress:verify": "cypress verify",
-    "cypress:version": "cypress version",
-    "cypress:info": "cypress info",
-    "cypress:cache:list": "cypress cache list",
-    "list-videos": "ls -l cypress/videos",
-    "check-videos": "ok-file 'cypress/videos/*.mp4'",
-    "set-status": "set-status"
+    "start": "node server.js & npx cypress open"
   },
   "keywords": [],
-  "author": "Gleb Bahmutov <gleb@cypress.io>",
+  "author": "Sam Tsai <samtsai@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "ok-file": "1.5.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cypress-io/cypress-test-tiny.git"
+    "@koa/multer": "^3.0.0",
+    "@koa/router": "^10.0.0",
+    "cypress": "6.2.1",
+    "fs": "0.0.1-security",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "multer": "^1.4.2"
   }
 }

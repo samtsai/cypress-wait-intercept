@@ -1,0 +1,38 @@
+<html>
+  <head></head>
+  <body>
+    Test aliasing requests via `cy.intercept`.
+    <script>
+      var url = "/api";
+      var body1 = new FormData();
+      body1.append("callerName", "call1");
+      fetch(url, {
+        method: "POST",
+        body: body1,
+      });
+      var body2 = new FormData();
+      body2.append("callerName", "call2");
+      fetch(url, {
+        method: "POST",
+        body: body2,
+      });
+      var body3 = new FormData();
+      body3.append("callerName", "call3");
+      fetch(url, {
+        method: "POST",
+        body: body3,
+      });
+      var body4 = new FormData();
+      body4.append("callerName", "call4");
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", url);
+      xhr.send(body4);
+      var body5 = new FormData();
+      body5.append("callerName", "anothercall");
+      fetch(url, {
+        method: "POST",
+        body: body5,
+      });
+    </script>
+  </body>
+</html>
